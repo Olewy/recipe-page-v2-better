@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root { 
+    --primary-color-1: #854632;
+    --primary-color-2: #7b284f;
+    --white-color: #ffffff;
+    --rose-white: #fff5fa;
+    --egg-shell: #f3e6d8;
+    --light-grey: #e4ded8;
+    --wenge-brown: #5f574e;
+    --dark-charcoal: #302d2c;
+    --font-1: "Young Serif", serif;
+    --font-2: "Outfit", sans-serif;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    font-size: 16px;
+    font-family: var(--font-2);
+
+}
+
+body h3 {
+    font-family: var(--font-1);
+}
+
+.background {
+    background-color: var(--egg-shell);
+    width: 100%;
+    padding: 124px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe-page {
+    max-width: 736px;
+    margin: auto 0;
+    background-color: var(--white-color);
+    border-radius: 20px;
+}
+
+/* HEADER */
+
+.recipe-page__header-img {
+    line-height: 0;
+    padding: 40px 40px 0 40px;
+}
+
+.recipe-page__header-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* BODY */
+
+.recipe-page__body {
+    padding: 40px;
+}
+
+.body__heading-title {
+    font-family: var(--font-1);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--dark-charcoal);
+}
+
+.body__heading-intro {
+    font-family: var(--font-2);
+    padding: 20px 0px 0px;
+}
+
+/* BODY - Section prepare */
+
+.body__section-prepare {
+    margin-top: 32px;
+    background-color: var(--rose-white);
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.section__prepare-heading {
+    color: var(--primary-color-2);
+    font-size: 18.72px;
+}
+
+.section-ingredients__heading--color1-f2,
+.section-istructions__heading--color1-f2,
+.section-nutritions__heading--color1-f2 {
+    color: var(--primary-color-1);
+    font-family: var(--font-1);
+    font-weight: 400;
+}
+
+.section-prepare-list,
+.section-ingredients__list,
+.section-instructions__list,
+.section-nutritions__text,
+.section-nutritions__table {
+    margin-top: 12px;
+    padding-left: 20px;
+}
+
+.section-prepare__list-item,
+.section-ingredients__list-item,
+.section-instructions__list-item,
+.section-nutritions__table {
+    padding-left: 16px;
+    padding-bottom: 8px;
+    color: var(--wenge-brown);
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.section-prepare__list-item::marker,
+.section-ingredients__list-item::marker {
+   font-size: 12px;
+}
+
+.section-nutritions__text--color1 {
+    color: var(--primary-color-1);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.section-prepare__list-item span,
+.section-instructions__list-item span {
+    font-weight: 700;
+}
+
+.section-instructions__list-item::marker {
+    font-weight: 700;
+}
+
+.body__section-ingredients, 
+.body__section-instructions,
+.body__section-nutritions {
+    margin-top: 32px;
+}
+
+.body__section-ingredients::after, 
+.body__section-instructions::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--light-grey);
+    margin-top: 32px;
+}
+
+.section-nutritions__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.section-nutritions__table tr td {
+    border-bottom: solid 1px var(--light-grey);
+    padding: 12px 32px;
+} 
+
+.section-nutritions__table tr:last-child td{
+    border: none;
+}
+
+.calories-value {
+    color: var(--primary-color-1);
+    font-weight: 700;
+}
+
+/* Responsive Design */
+
+@media (max-width: 736px) {
+    .background {
+        padding: 0;
+    }
+    .recipe-page {
+        border-radius: 0;
+    }
+    .recipe-page__header-img {
+        padding: 0;
+    }
+    .recipe-page__header-img img {
+        border-radius: 0;
+    }
+
+     /* Body */
+
+     .recipe-page__body {
+        padding: 32px;
+    }
+    
+    .body__heading-title {
+        font-weight: 500;
+    }
+
+    .body__section-prepare {
+        padding: 24px;
+    }
+
+    .section-prepare__list-item,
+    .section-ingredients__list-item,
+    .section-instructions__list-item,
+    .section-nutritions__table {
+        font-size: 1rem;
+    }
+}
